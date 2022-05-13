@@ -1,12 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
 *{
     margin: 0;
     padding: 0;
     outline: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 body{
     background-color: #fafafa;
-    font: 14px arial;
+    font: 14px;
+    font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased !important;
 }
+
+header#main-header{
+    background: #272727;
+    height: 75px;
+    
+}
+
+header#main-header .header-content{
+    width: 100%;
+    max-width: 930px;
+    padding: 0 autp;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+header#main-header .header-content a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+header#main-header .header-content a:hover{
+    color: rgba(213, 47, 228, 0.575);
+    text-decoration: none;
+    font-size: 25px;
+    transition: 0.4s;
+}
+
+header#main-header:hover{
+    color: rgba(65, 65, 65, 0.575);
+    transition: 0.4s;
+}
+
+header#main-header .header-content .dot {
+    width: 14px;
+    height: 14px;
+    background: rgba(213, 47, 228, 0.575);
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  header#main-header .header-content a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(-720px);
+    transform: translateX(-720px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  header#main-header .header-content a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(-520px);
+    transform: translateX(-520px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  header#main-header .header-content a:nth-child(3):hover ~ .dot {
+    -webkit-transform: translateX(-320px);
+    transform: translateX(-320px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  header#main-header .header-content a:nth-child(4):hover ~ .dot {
+    -webkit-transform: translateX(-120px);
+    transform: translateX(-120px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  

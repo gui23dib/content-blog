@@ -1,16 +1,26 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './global.css';
 import Home from './component/Home';
 import Content from './component/Content-page';
-import Header from './Header';
+import Login from './component/Login';
+import About from './component/About';
+import Header from './Header.js';
 
-class App extends React.Component{
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
+class App extends Component{
     render(){
         return(
           <div>
-            <Header />
-            <Home />
-            <Content />
+            <Router>
+              <Header />
+              <Routes>
+                <Route exact path='/' element={<Home />} />
+                <Route path='/content' element={<Content />} />
+                <Route path='/about' element={<Login />} />
+                <Route path='/login' element={<About />} />
+              </Routes>
+            </Router>
           </div>
         );
     }
