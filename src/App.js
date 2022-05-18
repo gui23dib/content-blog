@@ -17,8 +17,8 @@ class App extends Component{
               <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route path='/content' element={<Content />} />
-                <Route path='/about' element={<Login />} />
-                <Route path='/login' element={<About />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/about' element={<About />} />
               </Routes>
             </Router>
           </div>

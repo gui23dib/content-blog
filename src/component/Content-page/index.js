@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function Content(){
-    return(
-        <h1>Conteudo</h1>
-    );
+class Content extends Component{
+    
+    state = {
+
+    };
+    
+    componentDidMount(){
+        
+    }
+
+    render(){
+        return(
+            <div>
+                <h1>Conteudozada</h1>
+                <h2> teste </h2>
+            </div>
+        );
+    }
 }
-
 export default Content;
