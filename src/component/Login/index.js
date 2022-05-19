@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import './login.css';
 
 class Login extends Component{
     constructor(props){
@@ -12,21 +13,25 @@ class Login extends Component{
 
     render(){
         return(
-            <div>
-                <form>
+          <div id="Formstyle" className='Formstyle'>
+          <form onSubmit={this.loginSucces} id="form" className='form'> {/* USAR BIND NA STATE DO ONSUBMIT FAZ COM QUE A PAGINA NAO RENDERIZE (DUVIDA) */}
 
-                    <label>Email: </label><br/>
-                    <input typer="email" autoComplete="off" autoFocus value={this.state.email} 
-                    onChange={(element) => this.setState({email: element.target.value})} placeholder="Meuemail@email.com"/>
-                    <br/>
+            <label>Email:</label><br/>
+              <input type="email" autoComplete="off" autoFocus value={this.state.email}
+              onChange={(e) => this.setState({email: e.target.value})} placeholder="seuemail@email.com"/>
+              <br/>
 
-                    <label>Senha: </label><br/>
-                    <input typer="password" autoComplete="off" value={this.state.password} 
-                    onChange={(element) => this.setState({password: element.target.value})} placeholder="Senha1234"/>
-                    <br/>
+            <label>Senha:</label><br/>
+              <input type="password" autoComplete="off" value={this.state.password}
+              onChange={(e) => this.setState({password: e.target.value})} placeholder="suasenha123"/>
+              <br/>
+  
+            <button type="submit">Entrar</button><br/>
 
-                </form>
-            </div>
+            <div className='reglink'> Não esta cadastrado? <div><Link to ='/register' className='rrlink'> clique aqui</Link></div></div>
+
+          </form>
+        </div>
         );
     }
 }

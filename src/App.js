@@ -5,6 +5,7 @@ import Content from './component/Content-page';
 import Login from './component/Login';
 import About from './component/About';
 import Header from './Header.js';
+import Register from './component/Register';
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -19,6 +20,7 @@ class App extends Component{
                 <Route path='/content' element={<Content />} />
                 <Route path='/login' element={<Login />} />
                 <Route path='/about' element={<About />} />
+                <Route path='/register' element={<Register />} />
               </Routes>
             </Router>
           </div>
